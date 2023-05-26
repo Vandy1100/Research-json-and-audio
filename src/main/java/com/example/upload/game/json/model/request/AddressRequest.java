@@ -1,15 +1,16 @@
-package com.example.upload.game.json.model.response;
+package com.example.upload.game.json.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class AddressResponse {
+@Accessors(chain = true)
+public class AddressRequest {
     private String country;
-    private Object province;
     private String city;
     private String village;
 }
