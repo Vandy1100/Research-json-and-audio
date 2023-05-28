@@ -1,17 +1,18 @@
-package com.example.upload.game.json.model;
+package com.example.upload.game.json.model.response;
 
-import com.example.upload.game.json.model.response.AddressResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@EqualsAndHashCode
 @Accessors(chain = true)
-public class Game {
-    private int id;
-    private Object json_data;
-
+public class Province {
+    private String city;
+    private String village;
 }

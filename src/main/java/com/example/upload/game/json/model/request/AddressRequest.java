@@ -5,12 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
 public class AddressRequest {
-    private String country;
-    private String city;
+    private List<String> country;
+    private List<String> city;
     private String village;
 }
