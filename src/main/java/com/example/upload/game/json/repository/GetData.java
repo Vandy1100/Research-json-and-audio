@@ -25,4 +25,14 @@ public interface GetData {
                 @Result( column = "json_data",property = "json_data",typeHandler = JsonTypeHandler.class)
         })
         public List<JsonData> getAllJson();
+        @Select("SELECT * FROM test1_tb WHERE id = #{id}")
+        @Results({
+                @Result( column = "json_data",property = "json_data",typeHandler = JsonTypeHandler.class)
+        })
+        JsonData findAddressById(@Param("id") int id);
+        @Update("UPDATE test1_tb SET json_data = #{json}::jsonb WHERE id = #{id}")
+        void updateAddress(@Param("json") String json,@Param("id")int id);
+
+        @Delete("DELETE FROM test1_tb WHERE id =#{id}")
+        void deleteAddress(@Param("id")int id);
 }
