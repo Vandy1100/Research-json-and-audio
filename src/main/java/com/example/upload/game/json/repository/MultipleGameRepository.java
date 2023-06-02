@@ -13,7 +13,6 @@ public interface MultipleGameRepository {
 
     @Insert("INSERT INTO multiple_game_tb (multiple_game_data) VALUES (#{json}::jsonb)")
     void insertMultipleGame(@Param("json") String json);
-
     @Select("SELECT * FROM multiple_game_tb")
     @Result(column = "multiple_game_data",property = "multiple_game_data",typeHandler = MultipleGameTypeHandle.class)
     List<MultipleGame> getAllData();

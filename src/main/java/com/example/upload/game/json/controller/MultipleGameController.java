@@ -13,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/multiple_game")
@@ -52,5 +54,14 @@ public class MultipleGameController {
     public ResponseEntity<List<MultipleGame>> getAllData(){
         List<MultipleGame> games=multipleGameRepository.getAllData();
         return new ResponseEntity<>(games, HttpStatus.OK);
+    }
+    @GetMapping("/random")
+    ResponseEntity<?> getByRandomGame(){
+        List<MultipleGame> getAll=multipleGameRepository.getAllData();
+        int index=new Random().nextInt(getAll.size());
+        System.out.println(index);
+        MultipleGame getRandom= getAll.get(index);
+        System.out.println(getRandom);
+        return ResponseEntity.ok(getRandom);
     }
 }

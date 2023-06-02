@@ -27,12 +27,12 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     // https://mvnrepository.com/artifact/org.mybatis/mybatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
-
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation 'com.google.code.gson:gson:2.10.1'
-
-    // https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
-    implementation 'com.jayway.jsonpath:json-path:2.8.0'
+//
+//    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+//    implementation 'com.google.code.gson:gson:2.10.1'
+//
+//    // https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
+//    implementation 'com.jayway.jsonpath:json-path:2.8.0'
     // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
     implementation 'commons-fileupload:commons-fileupload:1.5'
 
